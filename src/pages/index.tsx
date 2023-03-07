@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import BlackHole1 from "../../public/iconW.png";
+import Cover from '../../public/Purple.jpg'
+import Nav from "./Nav";
 // import styles from '@/styles/Home.module.css'
 
 export default function Home() {
@@ -13,28 +16,51 @@ export default function Home() {
       </Head>
 
       {/* Body Start */}
-      <div className="  font-pop border-sky-900 FlexCenter h-screen rounded-lg">
+      <div className="FlexCenterCol font-pop border-sky-900 h-screen">
+        <Nav />
         {/* Flex Canvas Start */}
-        <div className="flex p-8 IceGrade BoxFull border-sky-800 Round">
-          {/* Column 1 */}
-          <div className=" flex flex-col Round h-full md:w-1/5">
-            {/* Box 1 */}
-            <div className=" GunGrade SideBar text-left">SideBar</div>
+        <div className=" FlexCenterCol md:flex-row p-4 IceGrade BoxFull ">
+          
+          {/* Intro Card */}
+          <div className="MARK flex flex-col mb-4 md:mr-16 Hover Glass h-full w-full md:w-1/4 md:flex-2 ">
+            
+            {/* Card Header */}
+            <div className="w-full items-center h-fit flex justify-between">
+              <h1 className="NameShadow text-4xl md:text-5xl font-bold text-left">
+                Black Holes
+              </h1>
+              <div className="text-white mx-4 BoxFit">
+                <Image className="text-center Spin" src={BlackHole1} alt="#" />
+              </div>
+            </div>
+
+            {/* First Text Box */}
+            <div className="NameShadow FlexCenter text-md Round text-left Glass ">
+              I've been thinking black holes either represent a 'turn-over
+              point' where 'information from this simulation i.e. galaxy is
+              compressed back into light and siphoned into an underlying matrix
+              (beyond our human detection) to help iterate the next
+              simulation/galaxy/universe. The basis of this being that evolution
+              appears to be a constant and the universe is constantly learning
+              from itself
+            </div>
           </div>
+          {/* Column 1 */}
 
           {/* Column 2 */}
-          <div className=" FlexCenter opacity-0 md:opacity-100  Round h-full w-5/6">
-            
-            {/* Main Dash */}
-            <div className=" FlexCenterCol Round h-full w-10/12 border-white text-3xl">
+          <div className="MARK flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
 
+            {/* Main Dash */}
+            {/* <div className="MARK FlexCenterCol Round h-full w-full md:w-10/12 border-white text-3xl"> */}
               {/* Dash Top Canvas */}
-              <div className="FlexCenter p-4 h-1/2 w-full">
-                <div className="DashTop bg-slate-300">BOX</div>
+              <div className="FlexCenter  p-4 h-1/2 w-full">
+                <div className="DashTop bg-slate-300">
+                  <Image className="Round" src={Cover} alt="black hole" fill objectFit="cover" />
+                </div>
               </div>
 
               {/* Dash Box Canvas */}
-              <div className=" grid grid-cols-3 gap-8 p-4 BoxFull border-violet-400">
+              <div className="grid grid-cols-3 gap-8 p-4 BoxFull border-violet-400">
                 <div className="DashBox "></div>
                 <div className="DashBox "></div>
                 <div className="DashBox "></div>
@@ -42,7 +68,7 @@ export default function Home() {
                 <div className="DashBox "></div>
                 <div className="DashBox "></div>
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>

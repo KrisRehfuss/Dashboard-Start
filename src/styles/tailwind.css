@@ -9,25 +9,37 @@ body {
 /* Gradients */
 
 .IceGrade {
-  @apply bg-gradient-to-bl from-gray-200 via-gray-400 to-gray-600
+  @apply bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-300 via-indigo-900 to-emerald-500
 }
 
 .GunGrade {
   @apply bg-gradient-to-b from-gray-700 via-gray-900 to-black
 }
 
+.ClearDrop {
+  @apply backdrop-blur-lg
+}
+
+.Clear {
+  @apply blur-sm
+}
+
 /* Customs */
 
 .SideBar {
-  @apply Hover Round  h-full w-full p-8 Shadow text-3xl HoverPush;
+  @apply Hover Round  h-full w-screen  p-8 Shadow text-3xl HoverPush ;
 }
 
+/* .SideBarMD {
+  @apply w-screen
+} */
+
 .DashTop {
-  @apply FlexCenter Round Shadow bg-slate-400 w-full h-full Hover HoverPush
+  @apply FlexCenter Round Shadow bg-coal w-full h-full Hover HoverPush
 }
 
 .DashBox {
-  @apply Round bg-slate-400 Shadow Hover HoverPush
+  @apply Round bg-gray-500 Shadow Hover HoverPush
 }
 
 /* .MainDash {
@@ -35,7 +47,7 @@ body {
 } */
 
 .Focus {
-  @apply Hover transform active:scale-90 Smooth cursor-pointer;
+  @apply Hover transform active:scale-110 Smooth cursor-pointer;
 }
 
 .HoverPush {
@@ -45,11 +57,11 @@ body {
 /* Structure */
 
 .MARK {
-  @apply border-white rounded-2xl border-4;
+  @apply Hover rounded-2xl border-2 border-sky-200
 }
 
 .Hover {
-  @apply hover:shadow-white hover:shadow-lg Smooth;
+   @apply hover:border-x-sky-200 active:border-y-pink-200 Smooth;
 }
 
 .BoxFull {
@@ -58,6 +70,10 @@ body {
 
 .BoxScreen {
   @apply h-screen w-screen;
+}
+
+.BoxFit {
+  @apply h-fit w-fit;
 }
 
 .Round {
@@ -103,9 +119,36 @@ body {
 }
 
 .Bounce {
-  @apply cursor-none hover:animate-spin Smooth hover:drop-shadow-xl hover:shadow-zinc-900;
+  @apply cursor-pointer hover:animate-bounce Smoother hover:drop-shadow-xl hover:text-white hover:shadow-zinc-900;
 }
 
-.Name {
-  @apply shadow-black mx-4 drop-shadow-md font-bold hover:drop-shadow-xl md:text-6xl md:mb-6;
+.Spin {
+  @apply cursor-none hover:animate-spin Smoother hover:drop-shadow-xl hover:shadow-zinc-900;
 }
+
+.NameShadow {
+  @apply shadow-black m-4 drop-shadow-md ;
+}
+
+.Glass {
+  @apply bg-coal p-4 Shadow mx-auto GlassMD
+}
+
+.GlassMD {
+  @apply md:min-h-fit md:max-w-2xl;
+}
+
+/* Nav */
+
+.Nav {
+  @apply h-fit w-screen text-lg flex md:justify-end justify-center
+}
+
+.NavItem {
+  @apply mx-8 hover:underline underline-offset-4 HoverPush
+}
+
+li {
+  @apply list-none 
+}
+
