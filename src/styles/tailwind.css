@@ -9,27 +9,43 @@ body {
 /* Gradients */
 
 .IceGrade {
-  @apply bg-gradient-to-tr from-IceDark to-IceBright;
+  @apply bg-gradient-to-bl from-gray-200 via-gray-400 to-gray-600
+}
+
+.GunGrade {
+  @apply bg-gradient-to-b from-gray-700 via-gray-900 to-black
 }
 
 /* Customs */
 
-.DashBox {
-  @apply Hover Round h-1/2 w-full bg-gray-800 p-8 Shadow border-white text-3xl;
+.SideBar {
+  @apply Hover Round  h-full w-full p-8 Shadow text-3xl HoverPush;
 }
 
-.MainDash {
-  @apply Hover shadow-2xl shadow-pink-400 transform active:scale-90 Smooth cursor-pointer;
+.DashTop {
+  @apply FlexCenter Round Shadow bg-slate-400 w-full h-full Hover HoverPush
 }
+
+.DashBox {
+  @apply Round bg-slate-400 Shadow Hover HoverPush
+}
+
+/* .MainDash {
+  @apply 
+} */
 
 .Focus {
-  @apply focus:scale-75 Smooth;
+  @apply Hover transform active:scale-90 Smooth cursor-pointer;
+}
+
+.HoverPush {
+  @apply Hover transform hover:scale-95 Smooth cursor-pointer
 }
 
 /* Structure */
 
 .MARK {
-  @apply rounded-2xl border-4;
+  @apply border-white rounded-2xl border-4;
 }
 
 .Hover {
@@ -53,7 +69,7 @@ body {
 }
 
 .FlexCenterCol {
-  @apply flex flex-col items-center justify-center;
+  @apply flex flex-col items-center justify-evenly;
 }
 
 /* Styles */
@@ -68,6 +84,10 @@ body {
 
 .Shadow {
   @apply shadow-2xl shadow-black;
+}
+
+.ShadowWhite {
+  @apply shadow-2xl shadow-white
 }
 
 .wBorder {

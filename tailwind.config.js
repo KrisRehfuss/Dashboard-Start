@@ -14,8 +14,10 @@ module.exports = {
         QR: "15px",
       },
       colors: {
-        IceBright: '#ecf2f5',
-        IceDark: '#7f8c9a',
+        IceBright: "#ecf2f5",
+        IceDark: "#7f8c9a",
+        Gunmetal: "#232e3b",
+        GunBright: "#576d7d",
         coal: "#191919",
         pri: "#8e949e",
         whyte: "hsl(0, 0%, 100%)",

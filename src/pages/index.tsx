@@ -13,25 +13,34 @@ export default function Home() {
       </Head>
 
       {/* Body Start */}
-      <div className="  font-pop border-sky-900 FlexCenter h-screen p-4 rounded-lg">
+      <div className="  font-pop border-sky-900 FlexCenter h-screen rounded-lg">
         {/* Flex Canvas Start */}
-        <div className="flex IceGrade BoxFull border-sky-800 Round">
-          {/* Section Start */}
-          <div className=" MARK md:flex md:gap-12 border-sky-700 p-4 w-full">
-            {/* Column 1 */}
-            <div className="flex flex-col gap-8 Round p-2 h-full md:w-1/4">
-              {/* Box 1 */}
-              <div className="bg-coal DashBox text-left">Box 1</div>
+        <div className="flex p-8 IceGrade BoxFull border-sky-800 Round">
+          {/* Column 1 */}
+          <div className=" flex flex-col Round h-full md:w-1/5">
+            {/* Box 1 */}
+            <div className=" GunGrade SideBar text-left">SideBar</div>
+          </div>
 
-              {/* Box 2 */}
-              <div className="bg-coal DashBox text-right">Box 2</div>
-            </div>
+          {/* Column 2 */}
+          <div className=" FlexCenter opacity-0 md:opacity-100  Round h-full w-5/6">
+            
+            {/* Main Dash */}
+            <div className=" FlexCenterCol Round h-full w-10/12 border-white text-3xl">
 
-            {/* Column 2 */}
-            <div className="opacity-0 md:opacity-100  Round h-full p-2 w-5/6">
-              {/* Main Dash */}
-              <div className="bg-coal Round p-8 BoxFull MainDash border-white text-3xl">
-                This is the main dashboard
+              {/* Dash Top Canvas */}
+              <div className="FlexCenter p-4 h-1/2 w-full">
+                <div className="DashTop bg-slate-300">BOX</div>
+              </div>
+
+              {/* Dash Box Canvas */}
+              <div className=" grid grid-cols-3 gap-8 p-4 BoxFull border-violet-400">
+                <div className="DashBox "></div>
+                <div className="DashBox "></div>
+                <div className="DashBox "></div>
+                <div className="DashBox "></div>
+                <div className="DashBox "></div>
+                <div className="DashBox "></div>
               </div>
             </div>
           </div>
