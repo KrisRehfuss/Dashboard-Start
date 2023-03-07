@@ -13,39 +13,27 @@ export default function Home() {
       </Head>
 
       {/* Body Start */}
-      <div className=" font-pop border-sky-900 FlexCenter h-screen p-4 rounded-lg">
-
-        {/* Flex Container Start */}
-        <div className="flex bg-gray-800 BoxFull border-sky-800 Round">
-
+      <div className="  font-pop border-sky-900 FlexCenter h-screen p-4 rounded-lg">
+        {/* Flex Canvas Start */}
+        <div className="flex IceGrade BoxFull border-sky-800 Round">
           {/* Section Start */}
-          <div className="MARK md:flex md:gap-12 border-sky-700 p-4 w-full">
-
+          <div className=" MARK md:flex md:gap-12 border-sky-700 p-4 w-full">
             {/* Column 1 */}
             <div className="flex flex-col gap-8 Round p-2 h-full md:w-1/4">
-
               {/* Box 1 */}
-              <div className="DashBox text-left">
-                Box 1
-              </div>
-              
+              <div className="bg-coal DashBox text-left">Box 1</div>
+
               {/* Box 2 */}
-              <div className="DashBox text-right">
-                Box 2
-              </div>
+              <div className="bg-coal DashBox text-right">Box 2</div>
             </div>
 
             {/* Column 2 */}
             <div className="opacity-0 md:opacity-100  Round h-full p-2 w-5/6">
-
               {/* Main Dash */}
-              <div className=" Round p-8 BoxFull MainDash border-white text-3xl">
+              <div className="bg-coal Round p-8 BoxFull MainDash border-white text-3xl">
                 This is the main dashboard
-
               </div>
-
             </div>
-
           </div>
         </div>
       </div>

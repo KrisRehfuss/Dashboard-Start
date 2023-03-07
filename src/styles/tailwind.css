@@ -2,31 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-body { 
+body {
   @apply bg-coal Smooth text-white font-pop scrollbar-hide scroll-smooth;
 }
 
+/* Gradients */
+
+.IceGrade {
+  @apply bg-gradient-to-tr from-IceDark to-IceBright;
+}
 
 /* Customs */
 
 .DashBox {
-  @apply  Round h-1/2 w-full bg-gray-800 p-8 Shadow border-white text-3xl
+  @apply Hover Round h-1/2 w-full bg-gray-800 p-8 Shadow border-white text-3xl;
 }
 
 .MainDash {
-  @apply shadow-2xl hover:shadow-pink-400 hover:drop-shadow-xl shadow-slate-500
+  @apply Hover shadow-2xl shadow-pink-400 transform active:scale-90 Smooth cursor-pointer;
 }
 
-
+.Focus {
+  @apply focus:scale-75 Smooth;
+}
 
 /* Structure */
 
 .MARK {
-  @apply Hover rounded-2xl border-4 ;
+  @apply rounded-2xl border-4;
 }
 
 .Hover {
-   @apply hover:border-pink-400 Smooth;
+  @apply hover:shadow-white hover:shadow-lg Smooth;
 }
 
 .BoxFull {
@@ -38,7 +45,7 @@ body {
 }
 
 .Round {
-  @apply rounded-2xl
+  @apply rounded-2xl;
 }
 
 .FlexCenter {
@@ -60,26 +67,25 @@ body {
 }
 
 .Shadow {
-  @apply shadow-2xl hover:shadow-sky-400 hover:drop-shadow-xl shadow-slate-500;
+  @apply shadow-2xl shadow-black;
 }
 
 .wBorder {
-   @apply border-2 border-white;
+  @apply border-2 border-white;
 }
 
 .Smooth {
-   @apply duration-75 ease-linear;
+  @apply duration-75 ease-linear;
 }
 
 .Smoother {
-   @apply duration-150 delay-75 ease-linear;
+  @apply duration-150 delay-75 ease-linear;
 }
 
 .Bounce {
-   @apply cursor-none hover:animate-spin Smooth hover:drop-shadow-xl hover:shadow-zinc-900;
+  @apply cursor-none hover:animate-spin Smooth hover:drop-shadow-xl hover:shadow-zinc-900;
 }
 
 .Name {
   @apply shadow-black mx-4 drop-shadow-md font-bold hover:drop-shadow-xl md:text-6xl md:mb-6;
 }
-
