@@ -5,10 +5,12 @@ import BlackHole1 from "../../public/iconW.png";
 import Cover from "../../public/Purple.jpg";
 import CoverVert from "../../public/purpleVert.jpg";
 import Nav from "./Nav";
+import TextField from "./TextField";
 import Banner from "./Banner";
 // import styles from '@/styles/Home.module.css'
 
 export default function Home() {
+  // Background-Changer
   const [imageUrl, setImageUrl] = useState(Cover);
 
   useEffect(() => {
@@ -22,6 +24,8 @@ export default function Home() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  
 
   return (
     <div>
@@ -40,7 +44,7 @@ export default function Home() {
         }}
       >
         <Image
-          className="Round "
+          className=""
           src={imageUrl}
           alt="black hole"
           // fill
@@ -49,16 +53,16 @@ export default function Home() {
       </div>
 
       {/* Body Start */}
-      <div className="FlexCenterCol font-pop border-sky-900 h-screen">
-        <Nav />
+      <div className="relative FlexCenterCol font-pop border-sky-900 h-screen">
         {/* <Banner /> */}
+        <div className="w-screen h-12  border-b-sky-"></div>
         {/* Flex Canvas Start */}
-        <div className=" FlexCenterCol md:flex-row p-4 IceGrade BoxFull ">
+        <div className="FlexCenterCol md:flex-row p-4 IceGrade BoxFull ">
           {/* Intro Card */}
-          <div className="ClearDrop CardMD flex flex-col md:mr-6 Hover Glass h-fit w-full md:w-1/4 md:h-full md:flex-2 ">
+          <div className="CardMD p-4 flex flex-col md:mr-6 Hover Glass h-fit w-full md:w-1/4 md:h-full md:flex-2 ">
             {/* Card Header */}
             <div className="w-full items-center h-fit flex justify-between">
-              <h1 className="NameShadow text-4xl md:text-5xl font-bold text-left">
+              <h1 className="font- NameShadow text-4xl md:text-5xl font-bold text-left">
                 Black Holes
               </h1>
               <div className="text-white mx-4 BoxFit">
@@ -67,7 +71,8 @@ export default function Home() {
             </div>
 
             {/* First Text Box */}
-            <div className="NameShadow bg-coal FlexCenter text-md Round text-left Glass ">
+            {/* <div className="NameShadow bg-coal FlexCenter text-md Round text-left Glass "> */}
+            <p className="p-4 leading-6 text-sm">
               I've been thinking black holes represent a 'turn-over point' where
               'information from this simulation i.e. galaxy is compressed back
               into light and siphoned into an underlying matrix (beyond our
@@ -75,16 +80,17 @@ export default function Home() {
               simulation/galaxy/universe. The basis of this being that evolution
               appears to be a constant and the universe is constantly learning
               from itself.
-            </div>
+            </p>
+
+            {/* </div> */}
           </div>
-          {/* Column 1 */}
 
           {/* Column 2 */}
-          <div className="MARK -z-20 -mt-12   flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
+          <div className="MARK -z-20 -mt-12 mb-24  flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
             {/* Main Dash */}
             {/* Dash Top Canvas */}
-            <div className="FlexCenter  p-4 h-1/2 w-full">
-              <div className="DashTop bg-slate-300">
+            <div className="FlexCenter MARK p-4 h-1/2 w-full">
+              <div className="MARK DashTop bg-slate-300">
                 <Image
                   className="Round"
                   src={Cover}
@@ -96,16 +102,15 @@ export default function Home() {
             </div>
 
             {/* Dash Box Canvas */}
-            <div className="grid grid-cols-3 gap-8 p-4 BoxFull border-violet-400">
-              <div className="DashBox "></div>
-              <div className="DashBox "></div>
-              <div className="DashBox "></div>
-              <div className="DashBox "></div>
-              <div className="DashBox "></div>
-              <div className="DashBox "></div>
-            </div>
+            <div className="MARK  gap-8 p-4 BoxFull border-violet-400"></div>
             {/* </div> */}
           </div>
+        </div>
+
+				{/* Text Field */}
+					<TextField />
+        <div className="absolute bottom-0">
+          <Nav />
         </div>
       </div>
     </div>

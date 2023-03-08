@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 body {
   @apply bg-coal Smooth text-white font-pop scrollbar-hide scroll-smooth;
 }
@@ -18,7 +20,7 @@ body {
 }
 
 .ClearDrop {
-  @apply backdrop-blur-sm hover:backdrop-blur-none;
+  @apply backdrop-blur-sm hover:backdrop-blur-sm;
 }
 
 .Clear {
@@ -32,7 +34,7 @@ body {
 }
 
 .CardMD {
-  @apply md:z-10 md:-mt-32 md:mb-4 md:ml-8
+  @apply bg-coal md:z-10 md:-mt-12 md:mb-4 md:ml-8
 }
 
 /* .SideBarMD {
@@ -136,7 +138,7 @@ body {
 }
 
 .Glass {
-  @apply p-4 Shadow GlassMD;
+  @apply Shadow GlassMD;
 }
 
 .GlassMD {
@@ -146,7 +148,7 @@ body {
 /* Nav */
 
 .Nav {
-  @apply bg-coal h-fit w-screen text-xl flex justify-center  md:p-4;
+  @apply backdrop-blur-lg h-fit w-screen text-xl flex justify-center  md:p-4;
 }
 
 .NavItem {
@@ -154,7 +156,7 @@ body {
 }
 
 .NavItemMD {
-  @apply mx-8 md:p-2 hover:underline hover:underline-offset-8;
+  @apply md:p-2 ;
 }
 
 li {

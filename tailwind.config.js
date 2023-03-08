@@ -27,6 +27,7 @@ module.exports = {
         inter: ["inter", "serif"],
         mont: ["Montserrat", "sans-serif"],
         pop: ["poppins", "sans-serif"],
+        tilt: ['Tilt Neon', 'cursive']
       },
     },
   },
