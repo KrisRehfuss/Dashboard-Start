@@ -25,8 +25,6 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  
-
   return (
     <div>
       <Head>
@@ -107,8 +105,8 @@ export default function Home() {
           </div>
         </div>
 
-				{/* Text Field */}
-					<TextField />
+        {/* Text Field */}
+        <TextField />
         <div className="absolute bottom-0">
           <Nav />
         </div>
