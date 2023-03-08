@@ -34,7 +34,7 @@ body {
 }
 
 .CardMD {
-  @apply bg-coal md:z-10 md:-mt-12 md:mb-4 md:ml-8
+  @apply bg-coal md:z-10 md:mb-4 md:ml-8
 }
 
 /* .SideBarMD {

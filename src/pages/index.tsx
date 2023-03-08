@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import BlackHole1 from "../../public/iconW.png";
+import BlackHole1 from "../../public/iconnew.png";
 import Cover from "../../public/Purple.jpg";
 import CoverVert from "../../public/purpleVert.jpg";
 import Nav from "./Nav";
@@ -42,13 +42,14 @@ export default function Home() {
         }}
       >
         <Image
-          className=""
+          className="Clear"
           src={imageUrl}
           alt="black hole"
           // fill
           // objectFit="cover"
         />
       </div>
+      <Nav />
 
       {/* Body Start */}
       <div className="relative FlexCenterCol font-pop border-sky-900 h-screen">
@@ -57,14 +58,19 @@ export default function Home() {
         {/* Flex Canvas Start */}
         <div className="FlexCenterCol md:flex-row p-4 IceGrade BoxFull ">
           {/* Intro Card */}
-          <div className="CardMD p-4 flex flex-col md:mr-6 Hover Glass h-fit w-full md:w-1/4 md:h-full md:flex-2 ">
+          <div className="CardMD z-20 -mt-52 p-4 flex flex-col md:mr-6 Hover Glass h-fit w-full md:w-1/4 md:h-full md:flex-2 ">
             {/* Card Header */}
             <div className="w-full items-center h-fit flex justify-between">
               <h1 className="font- NameShadow text-4xl md:text-5xl font-bold text-left">
                 Black Holes
               </h1>
               <div className="text-white mx-4 BoxFit">
-                <Image className="text-center Spin" src={BlackHole1} alt="#" />
+                <Image
+                  className="text-center mr-2 text-white Spin"
+                  src={BlackHole1}
+                  width={50}
+                  alt="#"
+                />
               </div>
             </div>
 
@@ -84,11 +90,11 @@ export default function Home() {
           </div>
 
           {/* Column 2 */}
-          <div className="MARK -z-20 -mt-12 mb-24  flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
+          <div className=" -z-20 -mt-12 mb-24  flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
             {/* Main Dash */}
             {/* Dash Top Canvas */}
-            <div className="FlexCenter MARK p-4 h-1/2 w-full">
-              <div className="MARK DashTop bg-slate-300">
+            <div className="FlexCenter  p-4 h-1/2 w-full">
+              <div className=" DashTop bg-slate-300">
                 <Image
                   className="Round"
                   src={Cover}
@@ -100,16 +106,15 @@ export default function Home() {
             </div>
 
             {/* Dash Box Canvas */}
-            <div className="MARK  gap-8 p-4 BoxFull border-violet-400"></div>
+            <div className="gap-8 p-4 BoxFull border-violet-400"></div>
             {/* </div> */}
           </div>
         </div>
 
         {/* Text Field */}
         <TextField />
-        <div className="absolute bottom-0">
-          <Nav />
-        </div>
+        {/* <div className="absolute bottom-0"> */}
+        {/* </div> */}
       </div>
     </div>
   );
