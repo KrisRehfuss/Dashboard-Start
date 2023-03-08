@@ -1,11 +1,28 @@
 import Head from "next/head";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import BlackHole1 from "../../public/iconW.png";
-import Cover from '../../public/Purple.jpg'
+import Cover from "../../public/Purple.jpg";
+import CoverVert from "../../public/purpleVert.jpg";
 import Nav from "./Nav";
+import Banner from "./Banner";
 // import styles from '@/styles/Home.module.css'
 
 export default function Home() {
+  const [imageUrl, setImageUrl] = useState(Cover);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newImageUrl = window.innerWidth >= 768 ? Cover : CoverVert;
+      setImageUrl(newImageUrl);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       <Head>
@@ -15,15 +32,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* Background Image */}
+      <div
+        style={{
+          zIndex: -100,
+          position: "fixed",
+        }}
+      >
+        <Image
+          className="Round "
+          src={imageUrl}
+          alt="black hole"
+          // fill
+          // objectFit="cover"
+        />
+      </div>
+
       {/* Body Start */}
       <div className="FlexCenterCol font-pop border-sky-900 h-screen">
         <Nav />
+        {/* <Banner /> */}
         {/* Flex Canvas Start */}
         <div className=" FlexCenterCol md:flex-row p-4 IceGrade BoxFull ">
-          
           {/* Intro Card */}
-          <div className="MARK flex flex-col mb-4 md:mr-16 Hover Glass h-full w-full md:w-1/4 md:flex-2 ">
-            
+          <div className="ClearDrop CardMD flex flex-col md:mr-6 Hover Glass h-fit w-full md:w-1/4 md:h-full md:flex-2 ">
             {/* Card Header */}
             <div className="w-full items-center h-fit flex justify-between">
               <h1 className="NameShadow text-4xl md:text-5xl font-bold text-left">
@@ -35,39 +67,43 @@ export default function Home() {
             </div>
 
             {/* First Text Box */}
-            <div className="NameShadow FlexCenter text-md Round text-left Glass ">
-              I've been thinking black holes either represent a 'turn-over
-              point' where 'information from this simulation i.e. galaxy is
-              compressed back into light and siphoned into an underlying matrix
-              (beyond our human detection) to help iterate the next
+            <div className="NameShadow bg-coal FlexCenter text-md Round text-left Glass ">
+              I've been thinking black holes represent a 'turn-over point' where
+              'information from this simulation i.e. galaxy is compressed back
+              into light and siphoned into an underlying matrix (beyond our
+              human detection) to help iterate the next
               simulation/galaxy/universe. The basis of this being that evolution
               appears to be a constant and the universe is constantly learning
-              from itself
+              from itself.
             </div>
           </div>
           {/* Column 1 */}
 
           {/* Column 2 */}
-          <div className="MARK flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
-
+          <div className="MARK -z-20 -mt-12   flex-1 FlexCenterCol p-8  Round h-full w-full md:w-4/6">
             {/* Main Dash */}
-            {/* <div className="MARK FlexCenterCol Round h-full w-full md:w-10/12 border-white text-3xl"> */}
-              {/* Dash Top Canvas */}
-              <div className="FlexCenter  p-4 h-1/2 w-full">
-                <div className="DashTop bg-slate-300">
-                  <Image className="Round" src={Cover} alt="black hole" fill objectFit="cover" />
-                </div>
+            {/* Dash Top Canvas */}
+            <div className="FlexCenter  p-4 h-1/2 w-full">
+              <div className="DashTop bg-slate-300">
+                <Image
+                  className="Round"
+                  src={Cover}
+                  alt="black hole"
+                  fill
+                  objectFit="cover"
+                />
               </div>
+            </div>
 
-              {/* Dash Box Canvas */}
-              <div className="grid grid-cols-3 gap-8 p-4 BoxFull border-violet-400">
-                <div className="DashBox "></div>
-                <div className="DashBox "></div>
-                <div className="DashBox "></div>
-                <div className="DashBox "></div>
-                <div className="DashBox "></div>
-                <div className="DashBox "></div>
-              </div>
+            {/* Dash Box Canvas */}
+            <div className="grid grid-cols-3 gap-8 p-4 BoxFull border-violet-400">
+              <div className="DashBox "></div>
+              <div className="DashBox "></div>
+              <div className="DashBox "></div>
+              <div className="DashBox "></div>
+              <div className="DashBox "></div>
+              <div className="DashBox "></div>
+            </div>
             {/* </div> */}
           </div>
         </div>
