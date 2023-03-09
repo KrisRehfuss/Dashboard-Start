@@ -1,21 +1,17 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import BlackHole1 from "../../public/iconnew.png";
+// import BlackHole1 from "../../public/iconnew.png";
 import Cover from "../../public/Purple.jpg";
 import CoverVert from "../../public/purpleVert.jpg";
 import Nav from "./Nav";
-// import { TextField, APIBar } from "./TextField";
 import { CHUNK_SIZE } from "../../common/chunk.constant";
 import { splitString } from "../../common/chunk.helper";
 import callGPT from "../../common/openai";
-// import { Analytics } from "@vercel/analytics/react";
-// import Head from "next/head";
 import { Configuration, OpenAIApi } from "openai";
 import sequence from "../../common/sequence";
 import Typewriter from "./TypeWriter";
-import Banner from "./Banner";
-// import styles from '@/styles/Home.module.css'
+// import Banner from "./Banner";
 
 export default function Home() {
   const [requestInput, setRequestInput] = useState("Summarize the text below");
