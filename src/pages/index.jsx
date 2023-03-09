@@ -210,12 +210,12 @@ export default function Home() {
                   <div className="PromptGroup mx-auto flex flex-col justify-center p-4">
                     <label className="Enter ">OpenAPI Key</label>
                     <textarea
-                      className="whitespace-nowrap px-4 pt-2 ring-violet-500 textEngine text-sm text-transparent font-mont focus:text-white focus:shadow-pink-500 shadow-2xl shadow-black  "
+                      className="whitespace-nowrap px-4 pt-2 border-violet-500 textEngine text-sm text-transparent font-mont focus:text-white focus:shadow-pink-500 shadow-2xl shadow-black  "
                       id=""
                       // rows={1}
                       type="text"
                       name="openaiAPIKey"
-                      placeholder="OpenAPI Key"
+                      // placeholder="OpenAPI Key"
                       value={openaiAPIKey}
                       onChange={(e) => setAPIKeyAndPersist(e.target.value)}
                     ></textarea>
@@ -225,7 +225,7 @@ export default function Home() {
                   <div className="PromptGroup ">
                     <label className="Enter">Enter your request</label>
                     <textarea
-                      className="textEngine py-4 px-4 pb-8 shadow-2xl shadow-black "
+                      className="textEngine py-4 px-4 pb-8 border-sky-500 shadow-2xl shadow-black "
                       id=""
                       // rows={2}
                       type="text"
@@ -242,7 +242,7 @@ export default function Home() {
                       The text you want to process
                     </label>
                     <textarea
-                      className="textEngine pt-4 pb-6 px-4 ring-green-500 shadow-2xl shadow-black"
+                      className="textEngine pt-4 pb-6 px-4 border-green-500 shadow-2xl shadow-black"
                       type="text"
                       name="text"
                       // rows={3}

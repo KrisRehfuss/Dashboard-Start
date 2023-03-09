@@ -45,7 +45,7 @@ body {
 }
 
 .textEngine {
-  @apply min-h-fit text-center text-base bg-coal ClearDrop Round scrollbar-hide Round w-full resize-none ring-1 focus:outline-none focus:border-0 focus:ring-0 focus-visible:ring-0 align-text-bottom
+  @apply min-h-fit border-2 focus:border-0 text-center text-base bg-coal ClearDrop Round scrollbar-hide Round w-full resize-none align-text-bottom
 }
 
 
