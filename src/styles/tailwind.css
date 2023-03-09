@@ -23,18 +23,22 @@ body {
   text-align: right;
   margin-bottom: 20px;
 
-  @apply ShadowWhite font-pop
+  @apply ShadowWhite font-pop lg:mr-12 md:mt-24
 }
 
 
 
 .PromptGroup {
-  @apply text-white mb-8 text-xl w-full flex flex-col justify-start p-4 
+  @apply text-white mb-4 text-xl w-full h-fit flex flex-col justify-start p-4 
 }
 
-/* .TextArea {
-  @apply 
-} */
+.PromptGroupMD {
+  @apply md:mb-8 md:text-xl md:w-full md:h-fit md:p-4
+}
+
+.textEngine {
+  @apply p-2 text-center text-base bg-coal ClearDrop Round scrollbar-hide  Round w-full resize-none ring-2 ring-coal  focus:outline-none focus:border-0 focus:ring-0 focus-visible:ring-0 mx-auto align-middle 
+}
 
 
 
@@ -68,19 +72,45 @@ body {
 }
 
 .PromptEngine {
-  @apply bg-coal ClearDrop  md:mb-4 md:ml-8;
+  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass h-fit w-full p-4 ClearDrop mb-4;
+}
+
+.PromptEngineMD {
+  @apply  md:mr-6 md:ml-8 md:mt-36 md:h-fit md:w-full md:p-4
+}
+
+.PromptEngineLG {
+  @apply lg:w-1/4 lg:-mt-80 
 }
 
 .Opacity {
   @apply bg-opacity-90 
 }
 
-/* .SideBarMD {
-  @apply w-screen
-} */
 
 .BackingCard {
-  @apply  ClearDrop  z-20 relative bg-coal Opacity -mt-36 flex-1 FlexCenterCol p-8 Round h-full w-full md:w-4/6
+  @apply BackingCardMD ClearDrop z-20 relative bg-coal Opacity flex-1 FlexCenterCol md:justify-center Round h-full w-full lg:w-4/6
+}
+
+.BackingCardMD {
+  @apply lg:w-4/6 lg:-mt-36
+}
+
+.BackingCardLG {
+  @apply lg:w-4/6 lg:-mt-36 lg:p-8
+}
+
+
+.Typewriter {
+  @apply TypewriterMD TypewriterLG p-8 Smoother Round cursor-pointer bg-coal shadow-2xl shadow-pink-500
+}
+
+.TypewriterMD {
+  @apply md:text-xl md:leading-10 md:shadow-sky-500
+}
+
+.TypewriterLG {
+  @apply md:text-xl lg:leading-8 lg:shadow-violet-500
 }
 
 /* .ResultCard {
@@ -95,9 +125,6 @@ body {
   @apply hidden Round bg-gray-500 Shadow Hover HoverPush;
 }
 
-.textEngine {
-  @apply p-8 text-center text-base bg-coal ClearDrop Round scrollbar-hide  Round w-full resize-none ring-2 ring-coal  focus:outline-none focus:border-0 focus:ring-0 focus-visible:ring-0 mx-auto align-middle 
-}
 
 .Enter {
   @apply text-slate-400 mb-2 text-center text-lg h-fit

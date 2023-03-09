@@ -183,15 +183,15 @@ export default function Home() {
       <Nav />
 
       {/* Body Start */}
-      <div className="relative FlexCenterCol font-pop border-sky-900 h-screen">
+      <div className="relative FlexCenterCol font-pop border-sky-900 max-h-fit md:h-screen">
         {/* <Banner /> */}
         {/* <div className="w-screen h-12 border-b-sky-"></div> */}
         {/* Flex Canvas Start */}
-        <div className="relative  FlexCenterCol  md:flex-row p-4 IceGrade BoxFull ">
+        <div className="relative  FlexCenterCol lg:flex-row p-8 md:p-4 IceGrade BoxFull ">
           {/* <TextField /> */}
 
           {/* Intro Card */}
-          <div className="MARK z-40 PromptEngine -mt-32 p-4 flex flex-col justify-between md:mr-6 Hover Glass h-full w-full md:w-1/4 md:flex-2 ">
+          <div className="MARK z-40 PromptEngine  ">
             {/* Card Header */}
 
             <div className=" z-40 w-full items-center h-full flex flex-col ">
@@ -266,7 +266,7 @@ export default function Home() {
                   {!processing && (
                     <input
                       type="submit"
-                      className="MARK mt-2 p-4 w-5/6 bg-green-800 cursor-pointer"
+                      className="MARK mt-2 mb-6 p-4 md:mt-12 w-4/6 bg-green-800 cursor-pointer"
                       value="Process your request"
                     />
                   )}
@@ -290,7 +290,7 @@ export default function Home() {
           </div>
 
           {/* Column 2 */}
-          <div className="BackingCard">
+          <div className=" BackingCard">
             {/* Main Dash */}
 
             {/* Dash Top Canvas */}
