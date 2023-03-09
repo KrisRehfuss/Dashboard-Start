@@ -80,8 +80,12 @@ body {
 } */
 
 .BackingCard {
-  @apply  ClearDrop  z-20 relative bg-whyte Opacity -mt-36 flex-1 FlexCenterCol p-8 Round h-full w-full md:w-4/6
+  @apply  ClearDrop  z-20 relative bg-coal Opacity -mt-36 flex-1 FlexCenterCol p-8 Round h-full w-full md:w-4/6
 }
+
+/* .ResultCard {
+  @apply 
+} */
 
 .DashTop {
   @apply flex  Round Shadow bg-coal bg-opacity-80  w-full h-full Hover HoverPush;
@@ -96,7 +100,7 @@ body {
 }
 
 .Enter {
-  @apply text-slate-800 mb-2 text-center text-lg h-fit
+  @apply text-slate-400 mb-2 text-center text-lg h-fit
 }
 
 
@@ -115,7 +119,7 @@ body {
 /* Structure */
 
 .MARK {
-  @apply Hover rounded-2xl border-2 border-sky-200;
+  @apply Hover rounded-2xl border-2 border-slate-400;
 }
 
 .Hover {

@@ -214,7 +214,7 @@ export default function Home() {
                   <div className="PromptGroup mx-auto flex flex-col  justify-center p-4">
                     <label className="Enter ">Enter your OpenAI API Key</label>
                     <textarea
-                      className="max-h-{200px} textEngine text-transparent focus:text-gray-600 shadow-2xl shadow-black  "
+                      className="max-h-{100px} textEngine overflow-hidden text-transparent focus:text-gray-600 shadow-2xl shadow-black  "
                       id=""
                       // rows={1}
                       type="text"

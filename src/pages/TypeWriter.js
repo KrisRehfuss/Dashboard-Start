@@ -16,7 +16,7 @@ const Typewriter = ({ text }) => {
       return () => clearInterval(type);
     }, [index, text]);
   
-    return <div className='Smoother Round cursor-pointer bg-whyte shadow-2xl text-xl leading-10 shadow-green-500 p-28'>{currentText}</div>;
+    return <div className='Smoother Round cursor-pointer bg-coal shadow-2xl text-xl leading-10 shadow-white p-28'>{currentText}</div>;
   };
 
   export default Typewriter;

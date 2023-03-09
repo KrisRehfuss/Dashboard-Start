@@ -6,10 +6,10 @@ function Nav() {
         <div className="NavItem text-white p-2 BoxFit">
           <li className="">Home</li>
         </div>
-        <div className="NavItem text-blue-500 p-2 BoxFit">
+        <div className="NavItem text-white p-2 BoxFit">
           <li className="">Saved</li>
         </div>
-        <div className="NavItem text-amber-500 p-2 BoxFit">
+        <div className="NavItem text-white p-2 BoxFit">
           <li className="">Prompts</li>
         </div>
       </div>
