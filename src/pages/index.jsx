@@ -192,7 +192,7 @@ export default function Home() {
 
             <div className=" z-40 w-full items-center h-full flex flex-col ">
               <h1 className="NameShadow my-4 mb-8 text-4xl md:text-5xl font-bold text-left">
-                Prompt <span className="text-violet-500">Engine </span>
+               Prompt <span className="text-violet-500">Engine </span>
               </h1>
               <div className=" text-white mr-8 BoxFit">
                 {/* <Image

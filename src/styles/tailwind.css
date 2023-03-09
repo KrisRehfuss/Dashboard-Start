@@ -88,7 +88,7 @@ body {
 }
 
 .PromptEngineLG {
-  @apply lg:w-1/4 lg:-mt-72 
+  @apply lg:w-1/4 lg:-mt-64 
 }
 
 .Opacity {
@@ -221,7 +221,7 @@ body {
 }
 
 .NameShadow {
-  @apply shadow-black drop-shadow-md;
+  @apply shadow-black drop-shadow-md hover:text-sky-500;
 }
 
 .Glass {
@@ -239,7 +239,7 @@ body {
 }
 
 .NavItem {
-  @apply text-lg mx-8 p-4 font-pop cursor-pointer hover:underline hover:underline-offset-8 NavItemMD;
+  @apply text-lg mx-4 p-4 font-pop cursor-pointer hover:underline hover:underline-offset-8 NavItemMD;
 }
 
 .NavItemMD {
