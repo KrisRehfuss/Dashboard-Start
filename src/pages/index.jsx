@@ -208,14 +208,14 @@ export default function Home() {
 
                   {/* OPENAI KEY */}
                   <div className="PromptGroup mx-auto flex flex-col justify-center p-4">
-                    <label className="Enter ">Enter your OpenAI API Key</label>
+                    <label className="Enter ">OpenAPI Key</label>
                     <textarea
-                      className="whitespace-nowrap px-4 pt-2 ring-violet-500 textEngine text-sm text-transparent focus:text-gray-600 focus:shadow-pink-500 shadow-2xl shadow-black  "
+                      className="whitespace-nowrap px-4 pt-2 ring-violet-500 textEngine text-sm text-transparent font-mont focus:text-white focus:shadow-pink-500 shadow-2xl shadow-black  "
                       id=""
                       // rows={1}
                       type="text"
                       name="openaiAPIKey"
-                      placeholder="Enter your OpenAI API Key"
+                      placeholder="OpenAPI Key"
                       value={openaiAPIKey}
                       onChange={(e) => setAPIKeyAndPersist(e.target.value)}
                     ></textarea>

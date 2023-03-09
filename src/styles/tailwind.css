@@ -26,6 +26,14 @@ body {
   @apply ShadowWhite font-pop lg:mr-12 md:mt-24
 }
 
+.MainWrapper {
+  @apply flex flex-col-reverse items-center justify-evenly p-8 BoxFull MainWrapperDesktop
+}
+
+.MainWrapperDesktop {
+  @apply md:p-4 lg:flex-row md:flex-col
+}
+
 
 
 .PromptGroup {
@@ -72,7 +80,7 @@ body {
 }
 
 .PromptEngine {
-  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass h-fit w-full p-4 ClearDrop mb-4;
+  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
 }
 
 .PromptEngineMD {
@@ -172,14 +180,6 @@ body {
 
 .FlexCenterCol {
   @apply flex flex-col items-center justify-evenly;
-}
-
-.MainWrapper {
-  @apply flex flex-col-reverse items-center justify-evenly p-8 BoxFull MainWrapperDesktop
-}
-
-.MainWrapperDesktop {
-  @apply md:p-4 lg:flex-row md:flex-col
 }
 
 /* Styles */

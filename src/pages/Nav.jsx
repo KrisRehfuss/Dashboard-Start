@@ -7,7 +7,7 @@ function Nav() {
           <li className="">Home</li>
         </div>
         <div className="NavItem text-white p-2 BoxFit">
-          <li className="">Saved</li>
+          <li className="">Get Key</li>
         </div>
         <div className="NavItem text-white p-2 BoxFit">
           <li className="">Prompts</li>
