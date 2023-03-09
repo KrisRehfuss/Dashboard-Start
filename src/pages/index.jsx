@@ -183,7 +183,7 @@ export default function Home() {
         {/* <Banner /> */}
         {/* <div className="w-screen h-12 border-b-sky-"></div> */}
         {/* Flex Canvas Start */}
-        <div className="relative  FlexCenterCol lg:flex-row p-8 md:p-4 IceGrade BoxFull ">
+        <div className="relative MainWrapper ">
           {/* <TextField /> */}
 
           {/* Intro Card */}
@@ -207,10 +207,10 @@ export default function Home() {
                 <form className="w-full FlexCenterCol mx-auto" onSubmit={onSubmit}>
 
                   {/* OPENAI KEY */}
-                  <div className="PromptGroup mx-auto flex flex-col  justify-center p-4">
+                  <div className="PromptGroup mx-auto flex flex-col justify-center p-4">
                     <label className="Enter ">Enter your OpenAI API Key</label>
                     <textarea
-                      className="max-h-{100px} textEngine overflow-hidden text-transparent focus:text-gray-600 shadow-2xl shadow-black  "
+                      className="whitespace-nowrap px-4 pt-2 ring-violet-500 textEngine text-sm text-transparent focus:text-gray-600 focus:shadow-pink-500 shadow-2xl shadow-black  "
                       id=""
                       // rows={1}
                       type="text"
@@ -225,12 +225,12 @@ export default function Home() {
                   <div className="PromptGroup ">
                     <label className="Enter">Enter your request</label>
                     <textarea
-                      className="h-fit textEngine shadow-2xl shadow-black "
+                      className="textEngine py-4 px-4 pb-8 shadow-2xl shadow-black "
                       id=""
                       // rows={2}
                       type="text"
                       name="request"
-                      placeholder="Enter your request"
+                    placeholder="Enter your request"
                       value={requestInput}
                       onChange={(e) => setRequestAndPersist(e.target.value)}
                     ></textarea>
@@ -242,7 +242,7 @@ export default function Home() {
                       The text you want to process
                     </label>
                     <textarea
-                      className="max-h-{200px} textEngine shadow-2xl shadow-black"
+                      className="textEngine pt-4 pb-6 px-4 ring-green-500 shadow-2xl shadow-black"
                       type="text"
                       name="text"
                       // rows={3}
@@ -263,37 +263,36 @@ export default function Home() {
                     <input
                       type="submit"
                       className="MARK mt-2 mb-6 p-4 md:mt-12 w-4/6 bg-green-800 cursor-pointer"
-                      value="Process your request"
+                      value="Process the request"
                     />
                   )}
-                  {processing && (
+                  {/* {processing && (
                     <input
                       type="submit"
                       value="Processing wait a few seconds..."
                       disabled
                     />
-                  )}
-                  {processing && <progress value={progress} max="100" />}
+                  )} */}
                 </form>
                 {result && <div></div>}
               </div>
             </div>
 
             {/* First Text Box */}
-            {/* <p className="p-4 leading-6 text-sm "></p> */}
+  
 
             {/* </div> */}
           </div>
 
           {/* Column 2 */}
-          <div className=" BackingCard">
+          <div className="BackingCard">
             {/* Main Dash */}
 
             {/* Dash Top Canvas */}
             <div className=" FlexCenter  z-50 p-4 h-1/2 w-full">
               <div className="DashTop BoxFit bg-slate-300">
                 <Image
-                  className="Round opacity-20 -z-30"
+                  className="Round  opacity-20 -z-30"
                   src={Cover}
                   alt="black hole"
                   fill
@@ -318,28 +317,21 @@ export default function Home() {
               </div>
             </div>
 
-{/* Second one */}
-
-            {!!textInput?.length && (
-              <div className="size">{`${textInput.length} characters - ${
-                parseInt(textInput.length / CHUNK_SIZE) + 1
-              } chunks to process`}</div>
-            )}
             {!processing && (
               <input
                 type="submit"
-                className="MARK hidden p-8 bg-blue-500 cursor-pointer"
+                className=" hidden p-8 bg-blue-500 cursor-pointer"
                 value="Process your request"
               />
             )}
             {processing && (
               <input
                 type="submit"
-                value="Processing wait a few seconds..."
+                value="Processing..."
                 disabled
               />
             )}
-            {processing && <progress value={progress} max="100" />}
+            {processing && <progress className="bg-sky-500 MARK p-2 m-4" value={progress} max="100" />}
             {result && <div></div>}
             
           </div>

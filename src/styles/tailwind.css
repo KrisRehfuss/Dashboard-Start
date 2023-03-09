@@ -37,7 +37,7 @@ body {
 }
 
 .textEngine {
-  @apply p-2 text-center text-base bg-coal ClearDrop Round scrollbar-hide  Round w-full resize-none ring-2 ring-coal  focus:outline-none focus:border-0 focus:ring-0 focus-visible:ring-0 mx-auto align-middle 
+  @apply min-h-fit text-center text-base bg-coal ClearDrop Round scrollbar-hide Round w-full resize-none ring-1 focus:outline-none focus:border-0 focus:ring-0 focus-visible:ring-0 align-text-bottom
 }
 
 
@@ -80,7 +80,7 @@ body {
 }
 
 .PromptEngineLG {
-  @apply lg:w-1/4 lg:-mt-80 
+  @apply lg:w-1/4 lg:-mt-72 
 }
 
 .Opacity {
@@ -89,20 +89,17 @@ body {
 
 
 .BackingCard {
-  @apply BackingCardMD ClearDrop z-20 relative bg-coal Opacity flex-1 FlexCenterCol md:justify-center Round h-full w-full lg:w-4/6
+  @apply BackingCardMD  ClearDrop z-20 mb-2 pb-2 relative Opacity flex-1 FlexCenterCol Round h-full w-full
 }
 
 .BackingCardMD {
-  @apply lg:w-4/6 lg:-mt-36
+  @apply lg:-mt-36 lg:w-4/6 lg:p-8 md:justify-center md:mb-8 md:pb-8
 }
 
-.BackingCardLG {
-  @apply lg:w-4/6 lg:-mt-36 lg:p-8
-}
 
 
 .Typewriter {
-  @apply TypewriterMD TypewriterLG p-8 Smoother Round cursor-pointer bg-coal shadow-2xl shadow-pink-500
+  @apply TypewriterMD bg-coal TypewriterLG p-8 Smoother Round cursor-pointer shadow-2xl shadow-pink-500
 }
 
 .TypewriterMD {
@@ -118,7 +115,7 @@ body {
 } */
 
 .DashTop {
-  @apply flex  Round Shadow bg-coal bg-opacity-80  w-full h-full Hover HoverPush;
+  @apply flex Round Shadow bg-coal bg-opacity-80  w-full h-full Hover HoverPush;
 }
 
 .DashBox {
@@ -175,6 +172,14 @@ body {
 
 .FlexCenterCol {
   @apply flex flex-col items-center justify-evenly;
+}
+
+.MainWrapper {
+  @apply flex flex-col-reverse items-center justify-evenly p-8 BoxFull MainWrapperDesktop
+}
+
+.MainWrapperDesktop {
+  @apply md:p-4 lg:flex-row md:flex-col
 }
 
 /* Styles */
@@ -234,11 +239,11 @@ body {
 }
 
 .NavItem {
-  @apply mx-8 p-4 cursor-pointer hover:underline hover:underline-offset-8 NavItemMD;
+  @apply text-lg mx-8 p-4 font-pop cursor-pointer hover:underline hover:underline-offset-8 NavItemMD;
 }
 
 .NavItemMD {
-  @apply md:p-2;
+  @apply md:p-2 md:mx-8 ;
 }
 
 li {
