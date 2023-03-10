@@ -31,7 +31,19 @@ body {
 }
 
 .MainWrapperDesktop {
-  @apply md:p-4 lg:flex-row md:flex-col
+  @apply md:p-4 lg:flex-col-reverse xl:flex-row
+}
+
+.PromptEngine {
+  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
+}
+
+.PromptEngineMD {
+  @apply  md:mr-6 md:ml-8 md:mt-36 md:h-fit md:w-full md:p-4
+}
+
+.PromptEngineLG {
+  @apply xl:w-1/4 lg:-mt-64 
 }
 
 
@@ -79,17 +91,6 @@ body {
   @apply Hover Round  h-full w-screen  p-8 Shadow text-3xl HoverPush;
 }
 
-.PromptEngine {
-  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
-}
-
-.PromptEngineMD {
-  @apply  md:mr-6 md:ml-8 md:mt-36 md:h-fit md:w-full md:p-4
-}
-
-.PromptEngineLG {
-  @apply lg:w-1/4 lg:-mt-64 
-}
 
 .Opacity {
   @apply bg-opacity-90 

@@ -64,9 +64,10 @@ export default function Home() {
     return callGPT(chunk, requestInput, openai);
   }
 
-  function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-  }
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+
 
   /**
    * This function is called when the user clicks the submit button.
@@ -82,7 +83,7 @@ export default function Home() {
       setResult([]);
 
       await sequence(chunks, (chunk, index) => {
-        scrollToBottom();
+        scrollToTop();
         setProgress(Math.round(((index - 1) / chunks.length) * 100));
         console.log(`Processing chunk: ${index} of ${chunks.length}`);
 
@@ -124,9 +125,9 @@ export default function Home() {
    */
   const setRequestAndPersist = (request) => {
     setRequestInput(request);
-    if (window && window.localStorage) {
-      window.localStorage.setItem("request", request);
-    }
+    // if (window && window.localStorage) {
+    //   window.localStorage.setItem("request", request);
+    // }
   };
 
   const setTextAndChunks = (text) => {
@@ -140,7 +141,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      const newImageUrl = window.innerWidth >= 768 ? Cover : CoverVert;
+      const newImageUrl = window.innerWidth >= 1440 ? Cover : CoverVert;
       setImageUrl(newImageUrl);
     };
 
