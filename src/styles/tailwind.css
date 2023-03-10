@@ -35,15 +35,11 @@ body {
 }
 
 .PromptEngine {
-  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
+  @apply PromptEngineMD bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
 }
 
 .PromptEngineMD {
-  @apply  md:mr-6 md:ml-8 md:mt-36 md:h-fit md:w-full md:p-4
-}
-
-.PromptEngineLG {
-  @apply xl:w-1/4 lg:-mt-64 
+  @apply  md:mr-6 md:ml-8  md:h-fit md:w-full md:p-4 lg:-mt-36 lg:mb-52 lg:w-2/4 xl:mb-36 xl:w-1/4 xl:-mt-[120px] 
 }
 
 

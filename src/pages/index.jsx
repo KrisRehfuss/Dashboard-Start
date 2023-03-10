@@ -14,7 +14,7 @@ import Typewriter from "./TypeWriter";
 // import Banner from "./Banner";
 
 export default function Home() {
-  const [requestInput, setRequestInput] = useState("Summarize the text below");
+  const [requestInput, setRequestInput] = useState("Answer the following question");
   const [textInput, setTextInput] = useState("");
   const [result, setResult] = useState([]);
   const [processing, setProcessing] = useState(false);
@@ -231,7 +231,7 @@ function scrollToTop() {
                       // rows={2}
                       type="text"
                       name="request"
-                    placeholder="Enter your request"
+                    // placeholder="Enter your request"
                       value={requestInput}
                       onChange={(e) => setRequestAndPersist(e.target.value)}
                     ></textarea>
