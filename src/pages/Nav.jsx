@@ -10,7 +10,15 @@ function Nav() {
           <li className=" ">
             <a href="https://beta.openai.com/account/api-keys">
               <span className="hover:text-violet-500">Get</span>{" "}
-              <span className="hover:text-sky-500">Key</span>
+              <span className=
+              "hover:text-sky-500">Key</span>
+            </a>
+          </li>
+        </div>
+        <div className="NavItem hover:text-green-500 text-white p-2 BoxFit">
+          <li>
+            <a href="https://krisengine.vercel.app/">
+              <span className="hover:text-green-500"> Dev Profile </span>
             </a>
           </li>
         </div>
